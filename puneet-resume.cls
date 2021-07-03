@@ -1,5 +1,5 @@
 % Intro Options
-\ProvidesClass{puneet-resume}[2014/04/30 CV class]
+\ProvidesClass{puneet-resume}[2021/06/29 CV]
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
@@ -9,17 +9,13 @@
 \LoadClass{article}
 
 % Package Imports
-\usepackage[hmargin=1.25cm, vmargin=0cm]{geometry}
+\usepackage[a4paper, hmargin=1.25cm, vmargin=0.7cm]{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
-\usepackage[absolute]{textpos}
 \usepackage[UKenglish]{babel}
 \usepackage[UKenglish]{isodate}
-\usepackage{fontspec,xltxtra,xunicode}
-\usepackage{blindtext}
-\usepackage{lipsum}
-\usepackage{amsmath}
+\usepackage{fontspec}
 
 
 % Color definitions
@@ -40,7 +36,7 @@
 % \newcommand{\headername}{\color{headings}
 % \fontspec[Path = fonts/calibri/]{Calibri}\fontsize{24pt}{32pt}\selectfont\raggedright}{} {0em}{}
 \newcommand{\headername}[1]{\color{subheadings}
-\fontspec[Path = fonts/calibri/]{CALIBRIB}\fontsize{24pt}{12pt}\selectfont\vspace{10pt}\raggedright {#1} \normalfont}
+\fontspec[Path = fonts/calibri/]{CALIBRIB}\fontsize{24pt}{12pt}\selectfont\vspace{0pt}\raggedright {#1} \normalfont}
 
 
 \titlespacing{\section}{0pt}{0pt}{0pt}
