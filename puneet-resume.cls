@@ -16,6 +16,7 @@
 \usepackage[UKenglish]{babel}
 \usepackage[UKenglish]{isodate}
 \usepackage{fontspec}
+\usepackage{fontawesome}
 
 
 % Color definitions
