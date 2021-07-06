@@ -9,7 +9,7 @@
 \LoadClass{article}
 
 % Package Imports
-\usepackage[a4paper, hmargin=1.25cm, vmargin=0.7cm]{geometry}
+\usepackage[a4paper, hmargin=1.25cm, vmargin=0.2cm]{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
@@ -17,7 +17,11 @@
 \usepackage[UKenglish]{isodate}
 \usepackage{fontspec}
 \usepackage{fontawesome}
+\usepackage{amssymb}
+\usepackage{enumitem}
 
+% Second level of lists will be a dot
+\renewcommand{\labelitemii}{$\textperiodcentered$}
 
 % Color definitions
 \definecolor{date}{HTML}{666666} 
@@ -72,7 +76,13 @@
 \newcommand{\sectionsep}[0]{\vspace{4pt}}
 
 % Bullet Lists with fewer gaps command
-\newenvironment{tightemize}{\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}{\end{itemize}\vspace{-\topsep}}
+\newenvironment{tightemize}{\begin{itemize}\itemsep0pt \parskip0pt \parsep0pt \topsep0pt \leftmargin0pt \itemindent0pt}{\end{itemize}\vspace{-\topsep}}
+
+% Create new list with no left margin
+\newlist{myitemize}{itemize}{1}
+\setlist[myitemize,1]{label=\textperiodcentered,leftmargin=4pt}
+
+\newenvironment{subtightemize}{\begin{myitemize}\itemsep0pt \parskip0pt \parsep0pt \topsep0pt}{\end{myitemize}}
 
 % Company desc command
 \newcommand{\companydescript}[1]{\color{subheadings}\raggedright\fontspec[Path = fonts/calibri/]{CALIBRII}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
